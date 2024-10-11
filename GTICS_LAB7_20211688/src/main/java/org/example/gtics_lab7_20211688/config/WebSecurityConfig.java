@@ -51,9 +51,11 @@ public class WebSecurityConfig {
         });
 
 
-
+        http.logout();
         http.authorizeHttpRequests()
                 .requestMatchers("/Admin","/Admin/**").hasAuthority("ADMIN") // si son varios, es hasAnyAuthority
+                .requestMatchers("/Gerente","/Gerente/**").hasAuthority("GERENTE")
+                .requestMatchers("/Cliente","/Cliente/**").hasAuthority("CLIENTE")
                 .anyRequest().permitAll();//cualquier otro queda permitido
 
         return http.build();
