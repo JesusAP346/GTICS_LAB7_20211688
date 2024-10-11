@@ -13,6 +13,37 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Todas las reservas</a>
             </li>
+            <li class="nav-item">
+                <span th:text="|Bienvenido ${#authentication.name}|"></span>
+            </li>
+
+            <li>
+                <form id="logoutForm" th:action="@{/logout}" method="post">
+                    <div class="border-top px-5 py-3">
+                        <a href="#" onclick="document.getElementById('logoutForm').submit(); return false;">Cerrar sesión</a>
+                    </div>
+                </form>
+            </li>
+
+        </ul>
+    </th:block>
+
+    <th:block th:fragment="barraSuperiorGerente">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" th:href="@{/Gerente/listaSalas}">Salas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/Gerente/listaObras}">Obras</a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Funciones</a>
+            </li>
+            <li class="nav-item">
+                <span th:text="|Bienvenido ${#authentication.name}|"></span>
+            </li>
 
             <li>
                 <form id="logoutForm" th:action="@{/logout}" method="post">
