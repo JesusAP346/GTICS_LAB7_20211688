@@ -13,7 +13,7 @@ public class TeatroController {
     FuncionesRepository funcionesRepository;
 
 
-    @GetMapping("/Admin")
+    @GetMapping({"/Admin/listaFunciones","/Admin"})
     public String funcionesAdmin(Model model){
 
         model.addAttribute("listaFunciones",funcionesRepository.findAll());
