@@ -12,6 +12,23 @@ import org.springframework.ui.Model;
 
 @Controller
 public class TeatroController {
+
+    /*CREDENCIALES:
+       ADMIN:
+       admin@gmail.com
+       admin
+
+       GERENTE:
+       gerente@gmail.com
+       gerente
+
+    * */
+
+
+
+
+
+
     @Autowired
     FuncionesRepository funcionesRepository;
 
