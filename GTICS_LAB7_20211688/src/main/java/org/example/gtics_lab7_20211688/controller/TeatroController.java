@@ -12,7 +12,7 @@ import org.springframework.ui.Model;
 
 @Controller
 public class TeatroController {
-
+    //crear base de datos con nombre: teatropucp
     /*CREDENCIALES:
        ADMIN:
        admin@gmail.com
